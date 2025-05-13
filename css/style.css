@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #4CAF50;
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    left: 20px; /* Sát bên trái */
+}
+
+.logo img {
+    height: 90px; /* Tuỳ chỉnh kích thước logo */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+}
+/*
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+    */
+header h1:hover {
+    color: #8eed6c;
+}
+h2 {
+    padding: 0 20px;
+    display: flex;
+    font-size: 30px;
+    flood-color: initial;
+    box-shadow: 5px 5px 5px #f0f0f0;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 350px;
+}
+
+.sidebar section {
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.sidebar p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.map-container {
+    flex: 2;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+}
+
+#forecastChart {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar {
+        max-width: 100%;
+    }
+
+    .map-container {
+        width: 100%;
+    }
+}

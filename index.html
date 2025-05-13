@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Air Quality Forecast</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="icon" href="https://img.lovepik.com/photo/60160/7711.jpg_wh860.jpg">
+    <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.lovepik.com/photo/60160/7711.jpg_wh860.jpg" alt="Logo" />
+        </div>
+        <h1>Air Quality Forecast</h1>
+    </header>
+    <main>
+        <div class="sidebar">
+            <section>
+                <h2>Tìm kiếm địa điểm</h2>
+                <input type="text" id="searchInput" placeholder="Nhập tên thành phố hoặc địa chỉ...">
+                <button onclick="searchCity()">Tìm kiếm</button>
+            </section>
+            <section>
+                <h2>Thông tin hiện tại</h2>
+                <p>Thành phố: <span id="city-name">Đang tải...</span></p>
+                <p>Chỉ số AQI: <span id="aqi">--</span></p>
+                <p>Tình trạng không khí: <span id="status">--</span></p>
+                <p>Chất ô nhiễm chính: <span id="main-pol">--</span></p>
+                <p>Nhiệt độ: <span id="temp">--</span>°C</p>
+                <p>Độ ẩm: <span id="humidity">--</span>%</p>
+            </section>
+            <section>
+                <h2>Khuyến nghị</h2>
+                <p><span id="advice">--</span></p>
+            </section>
+        </div>
+        <div class="map-container">
+            <section>
+                <h2>Bản đồ vị trí</h2>
+                <div id="map"></div>
+            </section>
+            <section>
+                <h2>Dự báo trong vài ngày tới</h2>
+                <canvas id="forecastChart"></canvas>
+            </section>
+        </div>
+    </main>
+<script src="/js/main.js">
+</script>
+</body>
+</html>
